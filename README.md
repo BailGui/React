@@ -80,3 +80,22 @@ function AboutPage() {
   );
 }
 ```
+
+Si vous avez beaucoup de HTML à migrer vers du JSX, vous pouvez vous aider d’un convertisseur en ligne.
+
+## Ajouter des styles
+
+Dans React, vous précisez une classe CSS avec className. Ça fonctionne exactement comme l’attribut class en HTML :
+
+```
+<img className="avatar" />
+```
+
+Ensuite vous écrivez vos règles CSS dans un fichier CSS distinct :
+
+```
+/* Dans votre CSS */
+.avatar {
+  border-radius: 50%;
+}
+```
