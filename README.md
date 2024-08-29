@@ -151,3 +151,23 @@ export default function Profile() {
   );
 }
 ```
+
+Dans l’exemple ci-avant, style={{}} ne constitue pas une syntaxe spéciale : c’est un littéral objet {} au sein d’accolades JSX style={}. Vous pouvez utiliser l’attribut style lorsque vos styles dépendent de données dans votre code JavaScript.
+
+## Affichage conditionnel
+
+Dans React, il n’y a pas de syntaxe spéciale pour écrire des conditions. Au lieu de ça, on utilise les mêmes techniques que pour écrire du code JavaScript normal. Par exemple, vous pouvez utiliser une instruction if pour choisir quel bout de JSX inclure :
+
+```
+let content;
+if (isLoggedIn) {
+  content = <AdminPanel />;
+} else {
+  content = <LoginForm />;
+}
+return (
+  <div>
+    {content}
+  </div>
+);
+```
