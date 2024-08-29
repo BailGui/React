@@ -18,14 +18,17 @@ Les applis React sont constituées de composants. Un composant, c’est un bout 
 
 ## Les composants React sont des fonctions JavaScript qui renvoient du balisage :
 
+```
 function MyButton() {
 return (
 <button>Je suis un bouton</button>
 );
 }
+```
 
 ## À présent que vous avez déclaré MyButton, vous pouvez l’imbriquer dans un autre composant :
 
+```
 export default function MyApp() {
 return (
 <div>
@@ -34,11 +37,13 @@ return (
 </div>
 );
 }
+```
 
 Remarquez que <MyButton /> commence par une majuscule. C’est comme ça que React sait qu’il s’agit d’un composant. Les noms de composants React doivent toujours démarrer par une majuscule, alors que les balises HTML doivent être en minuscules.
 
 ## Voyons ce que ça donne :
 
+```
 function MyButton() {
 return (
 <button>
@@ -55,3 +60,4 @@ return (
 </div>
 );
 }
+```
