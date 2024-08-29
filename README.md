@@ -171,3 +171,53 @@ return (
   </div>
 );
 ```
+
+Si vous préférez un style plus compact, vous pouvez utiliser l’opérateur ternaire conditionnel ?. Contrairement à if, celui-ci marche aussi au sein-même de JSX :
+
+```
+<div>
+  {isLoggedIn ? (
+    <AdminPanel />
+  ) : (
+    <LoginForm />
+  )}
+</div>
+```
+
+Si vous n’avez pas besoin de la branche else, vous pouvez utiliser l’opérateur && logique, plus court :
+
+```
+<div>
+  {isLoggedIn && <AdminPanel />}
+</div>
+```
+
+Toutes ces façons de faire fonctionnent aussi pour la définition conditionnelle d’attributs. Si certaines de ces syntaxes vous déroutent, vous pouvez toujours commencer par if...else.
+
+## Afficher des listes
+
+Pour afficher des listes de composants vous utiliserez principalement la méthode map() des tableaux, et parfois des boucles for.
+
+Par exemple, disons que vous avez un tableau de produits :
+
+```
+const products = [
+  { title: 'Chou', id: 1 },
+  { title: 'Ail', id: 2 },
+  { title: 'Pomme', id: 3 },
+];
+```
+
+Dans ce composant, on utilise la méthode map() pour transformer un tableau de produits en tableau d’éléments <li> :
+
+```
+const listItems = products.map(product =>
+  <li key={product.id}>
+    {product.title}
+  </li>
+);
+
+return (
+  <ul>{listItems}</ul>
+);
+```
