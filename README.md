@@ -61,3 +61,22 @@ return (
 );
 }
 ```
+
+Les mots-clés export default indiquent le composant principal du fichier. Si vous n’êtes pas habitué·e à certains éléments syntaxiques de JavaScript, le MDN et javascript.info sont d’excellentes références.
+
+## Écrire du balisage avec JSX
+
+La syntaxe de balisage que vous avez vue ci-avant s’appelle JSX. Elle n’est pas à proprement parler obligatoire, mais la plupart des projets React utilisent JSX par confort. Tous les outils que nous recommandons pour le développement en local prennent en charge JSX d’entrée de jeu.
+
+JSX est plus exigeant que HTML. Vous devez fermer les balises telles que <br />. Par ailleurs, votre composant ne peut pas renvoyer plusieurs balises JSX. Il vous faudrait les enrober dans un parent commun, tel qu’un <div>...</div> ou un Fragment <>...</> vide :
+
+```
+function AboutPage() {
+  return (
+    <>
+      <h1>À propos</h1>
+      <p>Bien le bonjour.<br />Comment ça va ?</p>
+    </>
+  );
+}
+```
