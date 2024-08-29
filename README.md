@@ -81,7 +81,7 @@ function AboutPage() {
 }
 ```
 
-Si vous avez beaucoup de HTML à migrer vers du JSX, vous pouvez vous aider d’un convertisseur en ligne.
+Si vous avez beaucoup de HTML à migrer vers du JSX, vous pouvez vous aider de https://transform.tools/html-to-jsx.
 
 ## Ajouter des styles
 
@@ -98,4 +98,29 @@ Ensuite vous écrivez vos règles CSS dans un fichier CSS distinct :
 .avatar {
   border-radius: 50%;
 }
+```
+
+React n’impose aucune façon particulière de fournir des fichiers CSS. Le cas le plus simple consiste à utiliser une balise <link> dans votre HTML. Si vous utilisez un outil de build ou un framework, consultez sa documentation pour apprendre comment ajouter un fichier CSS à votre projet.
+
+## Afficher des données
+
+JSX vous permet de mettre du balisage dans du JavaScript. Les accolades servent à « ressortir » dans JavaScript afin d’injecter une variable ou expression dans votre code et de l’afficher à l’utilisateur. Par exemple, ce code affichera user.name :
+
+```
+return (
+  <h1>
+    {user.name}
+  </h1>
+);
+```
+
+Vous pouvez aussi « ressortir dans JavaScript » au sein d’attributs JSX, mais vous devrez utiliser des accolades à la place des guillemets. Par exemple, className="avatar" passe la chaîne "avatar" comme classe CSS, mais src={user.imageUrl} lit d’abord la valeur de l’expression JavaScript user.imageUrl, et ensuite passe cette valeur à l’attribut src :
+
+```
+return (
+  <img
+    className="avatar"
+    src={user.imageUrl}
+  />
+);
 ```
