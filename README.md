@@ -267,3 +267,15 @@ function MyButton() {
   );
 }
 ```
+
+Remarquez qu’il n’y a pas de parenthèses à la fin ! N’appelez pas la fonction de gestionnaire d’événements : vous devez seulement la transmettre. React appellera votre gestionnaire d’événements lorsque l’utilisateur cliquera sur le bouton.onClick={handleClick}
+
+## Mise à jour de l’écran
+
+Souvent, vous voudrez que votre composant « se souvienne » de certaines informations et les affiche. Par exemple, vous souhaitez peut-être compter le nombre de fois qu’un bouton est cliqué. Pour ce faire, ajoutez state à votre composant.
+
+Tout d’abord, importez useState depuis React :
+
+```
+import { useState } from 'react';
+```
