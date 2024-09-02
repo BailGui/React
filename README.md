@@ -221,3 +221,31 @@ return (
   <ul>{listItems}</ul>
 );
 ```
+
+Notez comment a un attribut. Pour chaque élément d’une liste, vous devez transmettre une chaîne ou un nombre qui identifie de manière unique cet élément parmi ses frères et sœurs. Habituellement, une clé doit provenir de vos données, comme un ID de base de données. React utilise vos clés pour savoir ce qui s’est passé si vous insérez, supprimez ou réorganisez ultérieurement les éléments.<li>key
+
+```
+const products = [
+  { title: 'Cabbage', isFruit: false, id: 1 },
+  { title: 'Garlic', isFruit: false, id: 2 },
+  { title: 'Apple', isFruit: true, id: 3 },
+];
+
+export default function ShoppingList() {
+  const listItems = products.map(product =>
+    <li
+      key={product.id}
+      style={{
+        color: product.isFruit ? 'magenta' : 'darkgreen'
+      }}
+    >
+      {product.title}
+    </li>
+  );
+
+  return (
+    <ul>{listItems}</ul>
+  );
+}
+
+```
