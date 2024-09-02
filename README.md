@@ -253,3 +253,17 @@ export default function ShoppingList() {
 ## Réagir aux événements
 
 Vous pouvez répondre aux événements en déclarant des fonctions de gestionnaire d’événements à l’intérieur de vos composants :
+
+```
+function MyButton() {
+  function handleClick() {
+    alert('You clicked me!');
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Click me
+    </button>
+  );
+}
+```
