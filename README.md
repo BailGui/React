@@ -354,3 +354,9 @@ Dans l’exemple précédent, chacun avait son propre , et lorsque chaque bouton
 
 <img src="img1.webp">
 <img src="img2.webp">
+
+Cependant, vous aurez souvent besoin de composants pour partager les données et toujours les mettre à jour ensemble.
+
+Pour que les deux composants s’affichent de la même manière et se mettent à jour ensemble, vous devez déplacer l’état des boutons individuels « vers le haut » vers le composant le plus proche qui les contient tous.MyButtoncount
+
+Dans cet exemple, il s’agit de :MyApp
