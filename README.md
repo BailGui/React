@@ -249,3 +249,7 @@ export default function ShoppingList() {
 }
 
 ```
+
+## Réagir aux événements
+
+Vous pouvez répondre aux événements en déclarant des fonctions de gestionnaire d’événements à l’intérieur de vos composants :
