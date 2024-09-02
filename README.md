@@ -339,3 +339,18 @@ function MyButton() {
   );
 }
 ```
+
+Remarquez comment chaque bouton « se souvient » de son propre état et n’affecte pas les autres boutons.count
+
+## Utilisation des crochets
+
+Les fonctions commençant par sont appelées Hooks. est un Hook intégré fourni par React. Vous pouvez trouver d’autres hooks intégrés dans la référence de l’API. Vous pouvez également écrire vos propres Hooks en combinant ceux existants.useuseState
+
+Les crochets sont plus restrictifs que les autres fonctions. Vous ne pouvez appeler des Hooks qu’en haut de vos composants (ou d’autres Hooks). Si vous souhaitez l’utiliser dans une condition ou une boucle, extrayez un nouveau composant et placez-le là.useState
+
+## Partage de données entre composants
+
+Dans l’exemple précédent, chacun avait son propre , et lorsque chaque bouton était cliqué, seul le pour le bouton cliqué changeait :MyButtoncountcount
+
+<img src="img1.webp">
+<img src="img2.webp">
