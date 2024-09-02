@@ -279,3 +279,15 @@ Tout d’abord, importez useState depuis React :
 ```
 import { useState } from 'react';
 ```
+
+Vous pouvez maintenant déclarer une variable d’état à l’intérieur de votre composant :
+
+```
+function MyButton() {
+  const [count, setCount] = useState(0);
+  // ...
+```
+
+Vous obtiendrez deux choses à partir de : l’état actuel (), et la fonction qui vous permet de le mettre à jour (). Vous pouvez leur donner n’importe quel nom, mais la convention est d’écrire .useStatecountsetCount[something, setSomething]
+
+La première fois que le bouton s’affiche, c’est parce que vous avez passé à . Lorsque vous souhaitez changer d’état, appelez-le et passez-lui la nouvelle valeur. En cliquant sur ce bouton, le compteur sera incrémenté :count00useState()setCount()
