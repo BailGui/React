@@ -291,3 +291,23 @@ function MyButton() {
 Vous obtiendrez deux choses à partir de : l’état actuel (), et la fonction qui vous permet de le mettre à jour (). Vous pouvez leur donner n’importe quel nom, mais la convention est d’écrire .useStatecountsetCount[something, setSomething]
 
 La première fois que le bouton s’affiche, c’est parce que vous avez passé à . Lorsque vous souhaitez changer d’état, appelez-le et passez-lui la nouvelle valeur. En cliquant sur ce bouton, le compteur sera incrémenté :count00useState()setCount()
+
+```
+function MyButton() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Clicked {count} times
+    </button>
+  );
+}
+```
+
+React appellera à nouveau la fonction de votre composant. Cette fois, ce sera . Ensuite, ce sera . Et ainsi de suite.count12
+
+Si vous rendez le même composant plusieurs fois, chacun aura son propre état. Cliquez sur chaque bouton séparément :
