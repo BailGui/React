@@ -7,6 +7,9 @@ import HelloWorld from './HelloWorld';
 import Message from './message';
 import Counter from './UseState';
 import TaskApp from './Add';
+import BasicExample from './form';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,6 +20,7 @@ root.render(
     <Message text= "Salut" />
     <Counter /> <br />
     <TaskApp /> 
+    <BasicExample />
   </React.StrictMode>
 );
 
