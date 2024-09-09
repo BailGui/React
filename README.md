@@ -360,3 +360,5 @@ Cependant, vous aurez souvent besoin de composants pour partager les données et
 Pour que les deux composants s’affichent de la même manière et se mettent à jour ensemble, vous devez déplacer l’état des boutons individuels « vers le haut » vers le composant le plus proche qui les contient tous.MyButtoncount
 
 Dans cet exemple, il s’agit de :MyApp
+
+
